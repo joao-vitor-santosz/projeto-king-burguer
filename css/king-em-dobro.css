@@ -1,0 +1,241 @@
+/* ============================================ */
+/* Section: King em Dobro                        */
+/* ============================================ */
+
+.king-dobro-section {
+  position: relative;
+  width: 100%;
+  padding: var(--space-16) 0;
+  background-image: url("../public/images/background-2-burguers.png");
+  background-size: cover;
+  background-position: center 30%;
+  color: var(--color-text-light);
+  overflow: hidden;
+}
+
+.king-dobro-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.king-dobro-container {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--container-max));
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.king-dobro-offer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: flex-start;
+  background: transparent;
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  max-width: 560px;
+
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+  will-change: transform, opacity;
+}
+
+.king-dobro-offer.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.king-dobro-offer-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4vw, 4rem);
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.king-dobro-highlights {
+  display: flex;
+  gap: var(--space-4);
+  align-items: baseline;
+}
+
+.king-dobro-highlights .number {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 12vw, 8.5rem);
+  line-height: 0.8;
+  font-weight: 900;
+}
+
+.king-dobro-highlights .label {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 0.6;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-2) 0;
+  letter-spacing: 0.15em;
+}
+
+.king-dobro-from {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.9vw, 1.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-light);
+}
+
+.king-dobro-price {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.king-dobro-price .currency,
+.king-dobro-price .cents {
+  font-family: var(--font-display);
+  color: #fff;
+}
+
+.king-dobro-price .currency {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-top: 0.38rem;
+}
+
+.king-dobro-price .amount {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 8.5vw, 7rem);
+  line-height: 1;
+  font-weight: 900;
+  color: var(--color-text-light);
+}
+
+.king-dobro-price .cents {
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  line-height: 1;
+  margin-top: 0.4rem;
+}
+
+.king-dobro-note {
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+.king-selection-card {
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+  max-width: 480px;
+  padding: var(--space-6);
+  border-radius: var(--radius-2xl);
+  background: rgba(255, 252, 247, 0.96);
+  box-shadow: var(--shadow-xl);
+  color: var(--color-text);
+
+  transform: translateX(-30px);
+  opacity: 0;
+  transition: transform var(--transition-base), opacity var(--transition-base), transform var(--transition-fast);
+  will-change: transform, opacity;
+}
+
+.king-selection-card.is-visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.king-selection-card:hover,
+.king-selection-card:focus-within {
+  transform: translateX(0) scale(1.02);
+}
+
+.king-selection-title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: clamp(1.2rem, 2.3vw, 1.6rem);
+  letter-spacing: 0.18em;
+  text-align: center;
+  margin: 0 0 var(--space-5) 0;
+}
+
+.king-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.king-selection-item {
+  display: grid;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.king-selection-item .item-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.king-selection-item .item-image img {
+  padding: 10px;
+  background-color: #fcead2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.king-selection-item .item-label {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+@media (max-width: 1023px) {
+  .king-dobro-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .king-selection-card {
+    justify-self: stretch;
+    max-width: 100%;
+  }
+
+  .king-selection-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .king-dobro-section {
+    padding: var(--space-12) 0;
+    background-position: center 20%;
+  }
+
+  .king-selection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .king-dobro-offer {
+    max-width: 100%;
+  }
+
+  .king-dobro-title {
+    font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  }
+}

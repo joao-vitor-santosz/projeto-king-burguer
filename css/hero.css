@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================ */
+/* Hero Section — KB Ninja Promo               */
+/* ============================================ */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 5vh; /* Mantém menu visível e hero maior que viewport parcial */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  padding: 3.5rem 1.5rem 5.5rem; /* Aumenta espaçamento interno */
+  overflow: hidden;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: var(--container-max, 1200px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--grid-gap, 2rem);
+  align-items: center;
+  z-index: 1;
+}
+
+/* ============================================ */
+/* Coluna Esquerda — Conteúdo de Texto         */
+/* ============================================ */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6, 1.5rem);
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(-3rem);
+}
+
+.hero-content.is-visible {
+  animation: hero-content-enter 0.7s ease-out forwards;
+}
+
+@keyframes hero-content-enter {
+  0% {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Badge / Tag */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+  background-color: #00A859;
+  color: #FFFFFF;
+  border-radius: var(--radius-full, 9999px);
+  font-family: 'Titan One', cursive;
+  font-size: var(--text-xs, 0.75rem);
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: fit-content;
+  opacity: 0;
+  transform: scale(0.86);
+  transform-origin: center;
+  transition: opacity var(--transition-base, 250ms) ease-out, transform var(--transition-base, 250ms) ease-out;
+}
+
+.hero-badge.is-visible {
+  opacity: 1;
+  animation: hero-badge-bounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes hero-badge-bounce {
+  0% {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+  35% {
+    transform: scale(0.9);
+  }
+  55% {
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Título Principal */
+.hero-title {
+  font-family: 'Titan One', cursive;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.hero-title-ninja {
+  color: #00A859;
+  display: block;
+}
+
+.hero-title-chegou {
+  color: #FFFFFF;
+  display: block;
+}
+
+/* Subtítulo / Descrição */
+.hero-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.33;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+}
+
+.hero-description-highlight {
+  color: #00A859;
+  font-weight: 600;
+}
+
+/* CTA Button */
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4, 1rem) var(--space-6, 1.5rem);
+  border: 2px solid #00A859;
+  background-color: transparent;
+  color: #00A859;
+  border-radius: var(--radius-full, 9999px);
+  font-family: 'Titan One', cursive;
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 400;
+  line-height: 1.43;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all var(--transition-base, 250ms);
+  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+  width: fit-content;
+  animation: hero-button-pulse 2s ease-in-out infinite;
+}
+
+@keyframes hero-button-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+.hero-button:hover {
+  background-color: #00A859;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0px 32px 64px -8px rgba(0, 168, 89, 0.3);
+}
+
+.hero-button:active {
+  transform: translateY(0);
+}
+
+.hero-button:focus-visible {
+  outline: 2px solid #00A859;
+  outline-offset: 2px;
+}
+
+/* ============================================ */
+/* Coluna Direita — Imagem                     */
+/* ============================================ */
+
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(3rem);
+}
+
+.hero-image-wrapper.is-visible {
+  animation: hero-image-enter 0.7s ease-out forwards;
+}
+
+@keyframes hero-image-enter {
+  0% {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 576px;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  filter: drop-shadow(0px 25px 25px rgba(0, 0, 0, 0.15));
+  animation: float-up var(--transition-slow, 400ms) ease-out forwards;
+}
+
+@keyframes float-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================ */
+/* Rodapé — Scroll Indicator                   */
+/* ============================================ */
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 1rem; /* Distancia mais para baixo para evitar sobreposição */
+  left: 50%;
+  transform: translateX(-50%) translateY(26px);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2, 0.5rem);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Titan One', cursive;
+  font-size: var(--text-sm, 0.875rem);
+  line-height: 1.43;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+.hero-scroll-indicator.is-visible {
+  animation: hero-scroll-enter 0.6s ease-out forwards;
+}
+
+@keyframes hero-scroll-enter {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(26px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.hero-scroll-indicator-icon {
+  animation: bounce-arrow 1.3s ease-in-out infinite;
+}
+
+.hero-scroll-indicator-text {
+  display: block;
+}
+
+.hero-scroll-indicator-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+@keyframes bounce-down {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-arrow {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+/* ============================================ */
+/* Responsive — Mobile                         */
+/* ============================================ */
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    padding: var(--space-6, 1.5rem) var(--space-4, 1rem);
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--space-8, 2rem);
+    padding: var(--space-8, 2rem) 0;
+  }
+
+  .hero-content {
+    order: 2;
+    gap: var(--space-4, 1rem);
+    text-align: center;
+  }
+
+  .hero-badge {
+    margin: 0 auto;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
+
+  .hero-description {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .hero-button {
+    margin: 0 auto;
+  }
+
+  .hero-image-wrapper {
+    order: 1;
+  }
+
+  .hero-image {
+    max-width: 400px;
+  }
+
+  .hero-scroll-indicator {
+    bottom: var(--space-4, 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero-container {
+    gap: var(--space-6, 1.5rem);
+    padding: var(--space-6, 1.5rem) 0;
+  }
+
+  .hero-badge {
+    font-size: var(--text-xs, 0.75rem);
+    padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .hero-description {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+  }
+
+  .hero-button {
+    font-size: var(--text-xs, 0.75rem);
+    padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+  }
+
+  .hero-image {
+    max-width: 300px;
+  }
+
+  .hero-scroll-indicator {
+    font-size: var(--text-xs, 0.75rem);
+    gap: var(--space-1, 0.25rem);
+  }
+
+  .hero-scroll-indicator-icon {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================ */
+/* Redução de Movimento                        */
+/* ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image,
+  .hero-scroll-indicator {
+    animation: none;
+  }
+
+  .hero-button {
+    transition: none;
+  }
+
+  .hero-button:hover {
+    transform: none;
+  }
+}

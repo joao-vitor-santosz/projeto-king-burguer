@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Burguer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/ingredientes-premium.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/our-menu.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/kings-bacon.css">
+    <link rel="stylesheet" href="./css/king-em-dobro.css">
+    <link rel="stylesheet" href="./css/hmmmm-chicken-nuggets.css">
+    <link rel="stylesheet" href="./css/king-ninja.css">
+    <link rel="stylesheet" href="./css/app-download.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="top-banner">
+            ATENÇÃO! DESCONTOS E CUPONS PROMOCIONAIS SÓ PODEM SER OBTIDOS EM NOSSOS CANAIS OFICIAIS.
+        </div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="./public/images/icon.svg" alt="Ícone de talheres">
+                    <span class="logo-text">
+                        <span>KING</span><br>
+                        <span>BURGER</span>
+                    </span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#nosso-menu">MENU</a></li>
+                    <li><a href="#promocoes">PROMOÇÕES</a></li>
+                    <li><a href="#kids-menu">KIDS MENU</a></li>
+                    <li><a href="#app">APP</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">☰</button>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-header">
+                <div class="mobile-menu-logo">
+                    <img src="./public/images/icon.svg" alt="Ícone de talheres">
+                    <span class="logo-text">
+                        <span>KING</span><br>
+                        <span>BURGER</span>
+                    </span>
+                </div>
+                <button class="mobile-menu-close" aria-label="Fechar menu">✕</button>
+            </div>
+            <ul class="mobile-menu-links">
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#promocoes">PROMOÇÕES</a></li>
+                <li><a href="#kids-menu">KIDS MENU</a></li>
+                <li><a href="#app">APP</a></li>
+            </ul>
+        </div>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main>
+        <!-- ============================================ -->
+        <!-- Hero Section — KB Ninja Promo               -->
+        <!-- ============================================ -->
+        <section class="hero-section" id="hero-promo">
+            <div class="hero-container">
+                <!-- Coluna Esquerda — Conteúdo -->
+                <div class="hero-content">
+                    <!-- Badge -->
+                    <span class="hero-badge">Nova Promoção</span>
+
+                    <!-- Título -->
+                    <h1 class="hero-title">
+                        <span class="hero-title-ninja"><i>KB NINJA</i></span>
+                        <span class="hero-title-chegou"><i>CHEGOU!</i></span>
+                    </h1>
+
+                    <!-- Descrição -->
+                    <p class="hero-description">
+                        Nosso novo combo especial com brinde exclusivo das
+                        <span class="hero-description-highlight">Tartarugas Ninja!</span>
+                    </p>
+
+                    <!-- CTA Button -->
+                    <button class="hero-button" aria-label="Solicitar o combo KB Ninja">
+                        Quero Meu Combo!
+                    </button>
+                </div>
+
+                <!-- Coluna Direita — Imagem -->
+                <div class="hero-image-wrapper">
+                    <img
+                        src="./public/images/hero-burguer-gif.gif"
+                        alt="KB Ninja Combo - Hambúrguer especial com brinde temático das Tartarugas Ninja"
+                        class="hero-image"
+                    />
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="hero-scroll-indicator">
+                <span class="hero-scroll-indicator-text"><a href="#the-kings-bacon">Confira mais</a></span>
+                <span class="hero-scroll-indicator-icon">↓</span>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- "The Kings Bacon" Section                     -->
+        <!-- ============================================ -->
+        <section class="kings-bacon-section" id="the-kings-bacon">
+            <div class="kings-bacon-container">
+                <header class="kings-bacon-header" aria-labelledby="kings-bacon-title">
+                    <h2 id="kings-bacon-title">THE KINGS</h2>
+                    <p class="kings-bacon-subtitle">BACON</p>
+                </header>
+
+                <div class="kings-bacon-grid" aria-label="Produtos da linha Kings Bacon">
+                    <article class="kb-card kb-card-chicken">
+                        <p class="kb-label">KING BACON CHICKEN</p>
+                        <div class="kb-image-wrapper">
+                            <img src="./public/images/the-king-chicken.png" alt="King Bacon Chicken" />
+                        </div>
+                    </article>
+
+                    <article class="kb-card kb-card-duplo kb-card-highlight">
+                        <p class="kb-label">KING DUPLO BACON</p>
+                        <div class="kb-image-wrapper">
+                            <img src="./public/images/the-king-duplo.png" alt="King Duplo Bacon" />
+                        </div>
+                    </article>
+
+                    <article class="kb-card kb-card-regular">
+                        <p class="kb-label">KING BACON</p>
+                        <div class="kb-image-wrapper">
+                            <img src="./public/images/the-king-bacon.png" alt="King Bacon" />
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- "King em Dobro" Section                     -->
+        <!-- ============================================ -->
+        <section class="king-dobro-section" id="promocoes">
+            <div class="king-dobro-container">
+                <article class="king-dobro-offer" aria-labelledby="king-dobro-title">
+                    <h2 id="king-dobro-title" class="king-dobro-offer-title">KING EM DOBRO</h2>
+                    <div class="king-dobro-highlights">
+                        <p class="number">2</p>
+                        <p class="label">BURGERS <span class="king-dobro-from">A PARTIR DE</span></p>
+                    </div>
+                    <div class="king-dobro-price" aria-label="Preço a partir de R$ 25,90">
+                        <span class="currency">R$</span>
+                        <span class="amount">25</span>
+                        <span class="cents">,90</span>
+                    </div>
+                    <p class="king-dobro-note"><i>Os preços promocionais são válidos por tempo indeterminado. Confira as
+                    unidades participantes. Imagens meramente ilustrativas.</i></p>
+                </article>
+
+                <aside class="king-selection-card" aria-labelledby="king-selection-title">
+                    <h3 id="king-selection-title" class="king-selection-title">ESCOLHA ENTRE:</h3>
+                    <div class="king-selection-grid" role="list">
+                        <article class="king-selection-item" role="listitem">
+                            <div class="item-image">
+                                <img src="./public/images/the-king-chicken.png" alt="Chicken Duplo" />
+                            </div>
+                            <p class="item-label">CHICKEN DUPLO</p>
+                        </article>
+                        <article class="king-selection-item" role="listitem">
+                            <div class="item-image">
+                                <img src="./public/images/the-king-duplo.png" alt="Stacker Duplo Bacon" />
+                            </div>
+                            <p class="item-label">STACKER DUPLO BACON</p>
+                        </article>
+                        <article class="king-selection-item" role="listitem">
+                            <div class="item-image">
+                                <img src="./public/images/the-king-bacon.png" alt="Ribeye Duplo" />
+                            </div>
+                            <p class="item-label">RIBEYE DUPLO</p>
+                        </article>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- Ingredientes Premium Section                -->
+        <!-- ============================================ -->
+        <section class="ingredientes-premium-section" id="ingredientes-premium">
+            <div class="ingredientes-premium-container">
+                <header class="ingredientes-premium-header" aria-labelledby="ingredientes-premium-title">
+                    <h2 id="ingredientes-premium-title">INGREDIENTES PREMIUM</h2>
+                    <p class="ingredientes-premium-subtitle">Nossos ingredientes são selecionados um a um para entregar aquele sabor inconfundível King Burguer. Dê uma espiada em cada detalhe que faz a diferença no seu burger.</p>
+                </header>
+
+                <div class="ingredientes-premium-grid" aria-label="Lista de ingredientes premium">
+                    <article class="ingrediente-card ingrediente-card--1" aria-label="Carne Premium - 100% Angus">
+                        <img src="./public/images/ingrediente-1.png" alt="Carne Premium" class="ingrediente-card__img" />
+                        <h3 class="ingrediente-card__title">CARNE PREMIUM</h3>
+                        <p class="ingrediente-card__text">100% Angus</p>
+                    </article>
+                    <article class="ingrediente-card ingrediente-card--2" aria-label="Bacon Crocante - Temperado artesanalmente">
+                        <img src="./public/images/ingrediente-2.png" alt="Bacon Crocante" class="ingrediente-card__img" />
+                        <h3 class="ingrediente-card__title">BACON CROCANTE</h3>
+                        <p class="ingrediente-card__text">Temperado artesanalmente</p>
+                    </article>
+                    <article class="ingrediente-card ingrediente-card--3" aria-label="Queijo Derretido - Cheddar especial">
+                        <img src="./public/images/ingrediente-3.png" alt="Queijo Derretido" class="ingrediente-card__img" />
+                        <h3 class="ingrediente-card__title">QUEIJO DERRETIDO</h3>
+                        <p class="ingrediente-card__text">Cheddar especial</p>
+                    </article>
+                    <article class="ingrediente-card ingrediente-card--4" aria-label="Pão Artesanal - Feito na hora">
+                        <img src="./public/images/ingrediente-4.png" alt="Pão Artesanal" class="ingrediente-card__img" />
+                        <h3 class="ingrediente-card__title">PÃO ARTESANAL</h3>
+                        <p class="ingrediente-card__text">Feito na hora</p>
+                    </article>
+                    <article class="ingrediente-card ingrediente-card--5" aria-label="Alface Fresca - Selecionada diariamente">
+                        <img src="./public/images/ingrediente-5.png" alt="Alface Fresca" class="ingrediente-card__img" />
+                        <h3 class="ingrediente-card__title">ALFACE FRESCA</h3>
+                        <p class="ingrediente-card__text">Selecionada diariamente</p>
+                    </article>
+                    <article class="ingrediente-card ingrediente-card--6" aria-label="Tomate Selecionado - Da fazenda para você">
+                        <img src="./public/images/ingrediente-6.png" alt="Tomate Selecionado" class="ingrediente-card__img" />
+                        <h3 class="ingrediente-card__title">TOMATE SELECIONADO</h3>
+                        <p class="ingrediente-card__text">Da fazenda para você</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- HMMMM / Crispy Chicken Nuggets Section      -->
+        <!-- ============================================ -->
+        <section class="hmmmm-section" id="hmmmm" aria-labelledby="hmmmm-title">
+            <div class="hmmmm-container">
+                <header class="hmmmm-header">
+                    <h2 id="hmmmm-title">HMMMM</h2>
+                    <p>Saboroso em cada detalhe</p>
+                </header>
+
+                <div class="hmmmm-grid">
+                    <div class="hmmmm-image-wrapper">
+                        <img src="./public/images/hmm-chicken-nuggets.png" alt="Crispy Chicken Nuggets" />
+                    </div>
+
+                    <article class="hmmmm-content">
+                        <h3 class="hmmmm-product-name">Crispy Chicken Nuggets</h3>
+                        <p class="hmmmm-product-description">Crocantes por fora, suculentos por dentro. Nossos nuggets são feitos com peito de frango selecionado e temperados com nossa receita especial.</p>
+
+                        <div class="hmmmm-attributes" role="list" aria-label="Atributos do produto Crispy Chicken Nuggets">
+                            <article class="hmmmm-attribute" role="listitem" aria-label="Tempero Especial">
+                                <img src="./public/images/hmm-pimenta.png" alt="Ícone de pimenta" />
+                                <h4>Tempero Especial</h4>
+                                <p>Nossa receita secreta</p>
+                            </article>
+                            <article class="hmmmm-attribute" role="listitem" aria-label="Crocante Perfeito">
+                                <img src="./public/images/hmm-fogo.png" alt="Ícone de fogo" />
+                                <h4>Crocante Perfeito</h4>
+                                <p>Feito na hora</p>
+                            </article>
+                            <article class="hmmmm-attribute last-attribute" role="listitem" aria-label="100% Frango">
+                                <img src="./public/images/hmm-estrela.png" alt="Ícone de estrela" />
+                                <h4>100% Frango</h4>
+                                <p>Ingredientes premium</p>
+                            </article>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- "O Poder Ninja Chegou ao KB" Section        -->
+        <!-- ============================================ -->
+        <section class="kids-ninja-section" id="kids-menu" aria-labelledby="kids-ninja-title">
+            <div class="kids-ninja-container">
+                <button class="carousel-control carousel-control--left" aria-label="Anterior">
+                    ◀
+                </button>
+
+                <div class="kids-ninja-carousel" aria-live="polite">
+                    <article class="kids-ninja-slide is-active" tabindex="0">
+                        <div class="kids-ninja-grid">
+                            <div class="kids-ninja-media" aria-label="Imagem promocional das Tartarugas Ninja">
+                                <img src="./public/images/tartarugas.png" alt="Brinquedos das Tartarugas Ninja" loading="lazy" />
+                            </div>
+                            <div class="kids-ninja-content">
+                                <span class="kids-ninja-badge">KIDS MENU</span>
+                                <h2 class="kids-ninja-title" id="kids-ninja-title">O PODER NINJA CHEGOU AO KB</h2>
+                                <p class="kids-ninja-description">Peça seu King Jr. e colecione os brinquedos da Tartarugas Ninja!</p>
+                                <button class="kids-ninja-cta" aria-label="Quero Meu King Jr.">Quero Meu King Jr.</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="kids-ninja-slide" tabindex="-1">
+                        <div class="kids-ninja-grid">
+                            <div class="kids-ninja-media" aria-label="Imagem promocional do Samurai">
+                                <img src="./public/images/samurai.png" alt="Brinquedos do Samurai" loading="lazy" />
+                            </div>
+                            <div class="kids-ninja-content">
+                                <span class="kids-ninja-badge">KIDS MENU</span>
+                                <h2 class="kids-ninja-title">O PODER NINJA CHEGOU AO KB</h2>
+                                <p class="kids-ninja-description">Peça seu King Jr. e colecione os brinquedos da Tartarugas Ninja!</p>
+                                <button class="kids-ninja-cta" aria-label="Quero Meu King Jr.">Quero Meu King Jr.</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <button class="carousel-control carousel-control--right" aria-label="Próximo">
+                    ▶
+                </button>
+
+                <div class="kids-ninja-indicators" aria-hidden="true">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- "Nosso Menu" Section                        -->
+        <!-- ============================================ -->
+        <section class="our-menu-section" id="nosso-menu" aria-labelledby="our-menu-title">
+            <div class="our-menu-container">
+                <header class="our-menu-header" aria-labelledby="our-menu-title">
+                    <h2 id="our-menu-title">NOSSO MENU</h2>
+                    <p class="our-menu-subtitle">Explore nossos deliciosos produtos</p>
+                </header>
+
+                <div class="our-menu-filters" role="tablist" aria-label="Filtros de categoria do menu">
+                    <button class="our-menu-filter is-active" aria-selected="true" data-category="all" role="tab">TODOS</button>
+                    <button class="our-menu-filter" aria-selected="false" data-category="burgers" role="tab">BURGERS</button>
+                    <button class="our-menu-filter" aria-selected="false" data-category="bebidas" role="tab">BEBIDAS</button>
+                    <button class="our-menu-filter" aria-selected="false" data-category="acompanhamentos" role="tab">ACOMPANHAMENTOS</button>
+                </div>
+
+                <div class="our-menu-grid" aria-live="polite">
+                    <article class="our-menu-card" data-category="burgers" tabindex="0" aria-label="Burger King Chicken">
+                        <div class="our-menu-card-inner">
+                            <div class="our-menu-card-front">
+                                <img src="./public/images/menu-king-chicken.png" alt="King Chicken" />
+                                <h3 class="title-card-front">King Chicken</h3>
+                            </div>
+                            <div class="our-menu-card-back">
+                                <h3 class="title-card-back">King Chicken</h3>
+                                <p>Frango crocante com molho especial e alface</p>
+                                <span class="price">R$ 27,90</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="our-menu-card" data-category="burgers" tabindex="0" aria-label="Burger King Duplo">
+                        <div class="our-menu-card-inner">
+                            <div class="our-menu-card-front">
+                                <img src="./public/images/menu-king-duplo.png" alt="King Duplo" />
+                                <h3 class="title-card-front">King Duplo</h3>
+                            </div>
+                            <div class="our-menu-card-back">
+                                <h3 class="title-card-back">King Duplo</h3>
+                                <p>Dois hambúrgueres, queijo, alface, tomate e molho especial</p>
+                                <span class="price">R$ 35,90</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="our-menu-card" data-category="bebidas" tabindex="0" aria-label="Refrigerante">
+                        <div class="our-menu-card-inner">
+                            <div class="our-menu-card-front">
+                                <img src="./public/images/menu-refrigerante.png" alt="Refrigerante" />
+                                <h3 class="title-card-front">Refrigerante</h3>
+                            </div>
+                            <div class="our-menu-card-back">
+                                <h3 class="title-card-back">Refrigerante</h3>
+                                <p>Coca-Cola, Pepsi ou Guaraná gelado</p>
+                                <span class="price">R$ 8,90</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="our-menu-card" data-category="acompanhamentos" tabindex="0" aria-label="Batata Frita">
+                        <div class="our-menu-card-inner">
+                            <div class="our-menu-card-front">
+                                <img src="./public/images/menu-batata-frita.png" alt="Batata Frita" />
+                                <h3 class="title-card-front">Batata Frita</h3>
+                            </div>
+                            <div class="our-menu-card-back">
+                                <h3 class="title-card-back">Batata Frita</h3>
+                                <p>Porção crocante e temperada, servida com molho especial.</p>
+                                <span class="price">R$ 14,90</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="our-menu-card" data-category="burgers" tabindex="0" aria-label="Burger Bacon">
+                        <div class="our-menu-card-inner">
+                            <div class="our-menu-card-front">
+                                <img src="./public/images/menu-bacon.png" alt="King Bacon" />
+                                <h3 class="title-card-front">King Bacon</h3>
+                            </div>
+                            <div class="our-menu-card-back">
+                                <h3 class="title-card-back">King Bacon</h3>
+                                <p>Bacon crocante e saboroso</p>
+                                <span class="price">R$ 32,90</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="our-menu-card" data-category="acompanhamentos" tabindex="0" aria-label="Porção Samurai">
+                        <div class="our-menu-card-inner">
+                            <div class="our-menu-card-front">
+                                <img src="./public/images/samurai.png" alt="Porção Samurai" />
+                                <h3 class="title-card-front">Porção Samurai</h3>
+                            </div>
+                            <div class="our-menu-card-back">
+                                <h3 class="title-card-back">Porção Samurai</h3>
+                                <p>Mix crocante de batata e onion rings com molho especial.</p>
+                                <span class="price">R$ 19,90</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- "Baixe nosso App" Section                  -->
+        <!-- ============================================ -->
+        <section class="download-app-section" id="app" aria-labelledby="download-app-title">
+            <div class="download-app-container">
+                <div class="download-app-mockup">
+                    <img src="./public/images/app.png" alt="Mockup do app King Burger" />
+                </div>
+
+                <div class="download-app-content">
+                    <h2 id="download-app-title" class="download-app-title">Baixe nosso App e tenha o King Burger na palma da sua mão!</h2>
+
+                    <div class="download-app-buttons">
+                        <a href="#" class="download-app-button" aria-label="Disponível na App Store">
+                            <span class="download-app-icon" aria-hidden="true"></span>
+                            <span class="download-app-button-text">
+                                <span class="download-app-button-line1">Disponível na</span>
+                                <span class="download-app-button-line2">App Store</span>
+                            </span>
+                        </a>
+
+                        <a href="#" class="download-app-button download-app-button--google" aria-label="Disponível no Google Play">
+                            <span class="download-app-icon" aria-hidden="true">▶</span>
+                            <span class="download-app-button-text">
+                                <span class="download-app-button-line1">Disponível no</span>
+                                <span class="download-app-button-line2">Google Play</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer" aria-label="Rodapé King Burger">
+        <div class="footer-content">
+            <div class="footer-logo-group">
+                <img src="./public/images/icon.svg" alt="Ícone de talheres" class="footer-logo-icon">
+                <span class="footer-logo-text">KING BURGER</span>
+            </div>
+
+            <nav class="footer-nav" aria-label="Navegação do rodapé">
+                <a class="footer-nav-link" href="#app">APP KB</a>
+            </nav>
+
+            <div class="footer-social" aria-label="Redes sociais">
+                <a href="#" class="footer-social-link" aria-label="Instagram">
+                    <span class="material-symbols-outlined">camera_alt</span>
+                </a>
+                <a href="#" class="footer-social-link" aria-label="Compartilhar">
+                    <span class="material-symbols-outlined">share</span>
+                </a>
+            </div>
+
+            <p class="footer-legal">
+                Sujeito à disponibilidade em estoque. Imagens meramente ilustrativas. TM & © 2026 King Burger Company LLC. Usado sob licença. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

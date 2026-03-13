@@ -1,0 +1,212 @@
+/* Seção HMMMM / Crispy Chicken Nuggets */
+.hmmmm-section {
+  width: 100%;
+  background: linear-gradient(152deg, #f25829 0%, #351313 45%, #f25829 100%);
+  color: #fff;
+  padding: var(--space-12) 0;
+}
+
+.hmmmm-container {
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.hmmmm-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.hmmmm-header h2 {
+  font-family: var(--font-display);
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-2); 
+  color: #fff;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transform: translateY(2rem);
+  will-change: transform, opacity;
+  transition: opacity 500ms var(--transition-base), transform 500ms var(--transition-base);
+}
+
+.hmmmm-header h2.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hmmmm-header p {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  margin: 0;
+  color: #ffffffb7;
+  opacity: 0;
+  transform: translateY(1.5rem);
+  will-change: transform, opacity;
+  transition: opacity 500ms var(--transition-base), transform 500ms var(--transition-base);
+  transition-delay: 120ms;
+}
+
+.hmmmm-header p.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hmmmm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.hmmmm-image-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.88);
+  will-change: transform, opacity;
+}
+
+.hmmmm-image-wrapper.is-visible {
+  animation: hmmmm-image-elastic 900ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 200ms;
+}
+
+@keyframes hmmmm-image-elastic {
+  0%   { opacity: 0; transform: scale(0.82); }
+  55%  { opacity: 1; transform: scale(1.04); }
+  75%  {             transform: scale(0.97); }
+  100% { opacity: 1; transform: scale(1);    }
+}
+
+.hmmmm-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  position: relative;
+  z-index: 1;
+}
+
+.hmmmm-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  opacity: 0;
+  transform: translateX(3rem);
+  will-change: transform, opacity;
+  transition: opacity 600ms var(--transition-base), transform 600ms var(--transition-base);
+  transition-delay: 300ms;
+}
+
+.hmmmm-content.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hmmmm-product-name {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  margin: 0;
+  color: var(--color-accent);
+}
+
+.hmmmm-product-description {
+  font-size: var(--text-base);
+  color: #fef7e6;
+  margin: 0;
+}
+
+.hmmmm-attributes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.hmmmm-attribute {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.hmmmm-attribute img {
+  width: 42px;
+  height: 42px;
+  margin-bottom: var(--space-2);
+}
+
+.hmmmm-attribute h4 {
+  margin: 0 0 var(--space-1);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: #fff;
+}
+
+.hmmmm-attribute p {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .hmmmm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hmmmm-header h2 {
+    font-size: var(--text-3xl);
+  }
+
+  .hmmmm-product-name, .hmmmm-product-description {
+    text-align: center;
+  }
+
+  .hmmmm-attributes {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .hmmmm-section {
+    padding: var(--space-8) 0;
+  }
+
+  .hmmmm-header h2 {
+    font-size: var(--text-5xl);
+  }
+
+  .hmmmm-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hmmmm-product-name, .hmmmm-product-description {
+    text-align: center;
+  }
+
+  .hmmmm-attributes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hmmmm-header h2,
+  .hmmmm-header p,
+  .hmmmm-content {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hmmmm-image-wrapper {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
